@@ -30,13 +30,15 @@ module.exports = app => {
 
    // Articles
    app.route('/articles')
-   .get(app.api.article.get)
-   .post(app.api.article.save);
+      .get(app.api.article.get)
+      .post(app.api.article.save);
 
    app.route('/articles/:id')
-   .get(app.api.article.getById)
-   .put(app.api.article.save)
-   .delete(app.api.article.remove);
+      .get(app.api.article.getById)
+      .put(app.api.article.save)
+      .delete(app.api.article.remove);
 
+   app.route('/categories/:id/articles')
+      .get(app.api.article.getByCategory);
 
 }
