@@ -57,9 +57,9 @@ module.exports = app => {
       .all(app.config.passport.authenticate())
       .get(app.api.article.getByCategory);
 
-      // NongoDB stats
-      app.route('/stats')
+   // NongoDB stats
+   app.route('/stats')
       .all(app.config.passport.authenticate())
       .get(app.api.stat.get)
-
+   ///////////////////////////////////////
 }
