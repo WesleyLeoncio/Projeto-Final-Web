@@ -17,6 +17,7 @@ export default {
     components: { UserDropdown },
     props:{
         title: String,
+        hideToggle: Boolean,
         hideUserDropdown: Boolean
     },
     computed:{
