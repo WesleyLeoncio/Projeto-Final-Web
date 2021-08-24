@@ -26,8 +26,8 @@ module.exports = app => {
             name: user.name,
             email: user.email,
             admin: user.admin,
-            iat: now,
-            exp: now + (60 * 60 * 24 * 3) // tempo de espiração do token 
+            iat: now,                      // MODIFICAR O TEMPO PARA 3
+            exp: now + (60 * 60 * 24 * 30) // tempo de espiração do token 
         }
 
         res.json({
